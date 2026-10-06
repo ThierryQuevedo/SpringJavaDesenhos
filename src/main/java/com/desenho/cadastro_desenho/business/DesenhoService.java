@@ -17,7 +17,7 @@ public class DesenhoService {
         repository.saveAndFlush(desenho);
     }
 
-    public Desenho buscarDesenhosPorNome(String nome){
+    public Desenho buscarDesenhoPorNome(String nome){
         return repository.findByNome(nome).orElseThrow(
                 () -> new RuntimeException("Nome não encontrado")
         );
